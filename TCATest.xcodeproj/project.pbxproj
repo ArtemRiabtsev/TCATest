@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,11 @@
 		AC0D18C62C05F0D900867229 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D18C52C05F0D900867229 /* ContentView.swift */; };
 		AC0D18C82C05F0DA00867229 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0D18C72C05F0DA00867229 /* Assets.xcassets */; };
 		AC0D18CB2C05F0DA00867229 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0D18CA2C05F0DA00867229 /* Preview Assets.xcassets */; };
+		AC0D19042C0606B200867229 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19032C0606B200867229 /* Networking */; };
+		AC0D19072C0606D600867229 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19062C0606D600867229 /* NukeUI */; };
+		AC0D190A2C0606FD00867229 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19092C0606FD00867229 /* Dependencies */; };
+		AC0D190C2C0606FD00867229 /* DependenciesMacros in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D190B2C0606FD00867229 /* DependenciesMacros */; };
+		AC0D190F2C06070D00867229 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D190E2C06070D00867229 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,7 @@
 		AC0D18C52C05F0D900867229 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC0D18C72C05F0DA00867229 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC0D18CA2C05F0DA00867229 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AC0D19012C06067B00867229 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0D190F2C06070D00867229 /* ComposableArchitecture in Frameworks */,
+				AC0D190A2C0606FD00867229 /* Dependencies in Frameworks */,
+				AC0D19042C0606B200867229 /* Networking in Frameworks */,
+				AC0D190C2C0606FD00867229 /* DependenciesMacros in Frameworks */,
+				AC0D19072C0606D600867229 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +46,7 @@
 		AC0D18B72C05F0D900867229 = {
 			isa = PBXGroup;
 			children = (
+				AC0D19002C06065900867229 /* CoreLayer */,
 				AC0D18C22C05F0D900867229 /* TCATest */,
 				AC0D18C12C05F0D900867229 /* Products */,
 			);
@@ -67,6 +79,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AC0D19002C06065900867229 /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D19012C06067B00867229 /* Networking */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +103,13 @@
 			dependencies = (
 			);
 			name = TCATest;
+			packageProductDependencies = (
+				AC0D19032C0606B200867229 /* Networking */,
+				AC0D19062C0606D600867229 /* NukeUI */,
+				AC0D19092C0606FD00867229 /* Dependencies */,
+				AC0D190B2C0606FD00867229 /* DependenciesMacros */,
+				AC0D190E2C06070D00867229 /* ComposableArchitecture */,
+			);
 			productName = TCATest;
 			productReference = AC0D18C02C05F0D900867229 /* TCATest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +138,12 @@
 				Base,
 			);
 			mainGroup = AC0D18B72C05F0D900867229;
+			packageReferences = (
+				AC0D19022C0606B200867229 /* XCLocalSwiftPackageReference "CoreLayer/Networking" */,
+				AC0D19052C0606D600867229 /* XCRemoteSwiftPackageReference "Nuke" */,
+				AC0D19082C0606FD00867229 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+				AC0D190D2C06070D00867229 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = AC0D18C12C05F0D900867229 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,6 +377,67 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		AC0D19022C0606B200867229 /* XCLocalSwiftPackageReference "CoreLayer/Networking" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = CoreLayer/Networking;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC0D19052C0606D600867229 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.7.0;
+			};
+		};
+		AC0D19082C0606FD00867229 /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+		AC0D190D2C06070D00867229 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC0D19032C0606B200867229 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		AC0D19062C0606D600867229 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC0D19052C0606D600867229 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		AC0D19092C0606FD00867229 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC0D19082C0606FD00867229 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+		AC0D190B2C0606FD00867229 /* DependenciesMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC0D19082C0606FD00867229 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = DependenciesMacros;
+		};
+		AC0D190E2C06070D00867229 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC0D190D2C06070D00867229 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC0D18B82C05F0D900867229 /* Project object */;
 }
