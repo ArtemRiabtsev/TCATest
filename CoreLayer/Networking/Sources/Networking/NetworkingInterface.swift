@@ -4,5 +4,5 @@
 import Foundation
 
 public protocol NetworkingInterface {
-    func execute<T: Decodable>(request: URLRequest) async throws -> T
+    func execute<T: Decodable>(request: RequestProvider) async throws -> T
 }

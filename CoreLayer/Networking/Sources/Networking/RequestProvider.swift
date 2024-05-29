@@ -18,8 +18,8 @@ public enum HTTPMethod: String {
 public protocol RequestInput: Encodable { }
 
 public protocol RequestProvider {
-    var baseURL: String? { get }
-    var path: String { get }
+    var baseURL: String? { get set }
+    var path: String? { get }
     var method: HTTPMethod { get }
 }
 

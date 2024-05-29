@@ -10,12 +10,18 @@ import Foundation
 final public class APIClient: NetworkingInterface {
     private let session: URLSession
 
+    var baseURL: String {
+        "https://rickandmortyapi.com"
+    }
+
     public init(session: URLSession? = nil) {
         self.session = session ?? URLSession(configuration: .default)
     }
 
-    public func execute<T>(request: URLRequest) async throws -> T where T : Decodable {
-        let (data, response) = try await session.data(for: request)
+    public func execute<T>(request: RequestProvider) async throws -> T where T : Decodable {
+        let updatedRequest = updateBaseURLIfEmpty(forRequest: request)
+        let (data, response) = try await session.data(for: updatedRequest.asURLRequest())
+
         return try handeleResponse(data: data, response: response)
     }
 
@@ -33,5 +39,16 @@ final public class APIClient: NetworkingInterface {
         default:
             throw APIError.someAPIError
         }
+    }
+
+    private func updateBaseURLIfEmpty<R>(forRequest request: R) -> R where R: RequestProvider {
+        var request = request
+
+        // if no baseURL was provided for specific request, general base url for this api session is used.
+        if request.baseURL == nil {
+            request.baseURL = self.baseURL
+        }
+
+        return request
     }
 }

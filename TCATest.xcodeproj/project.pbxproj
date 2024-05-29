@@ -16,6 +16,8 @@
 		AC0D190A2C0606FD00867229 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19092C0606FD00867229 /* Dependencies */; };
 		AC0D190C2C0606FD00867229 /* DependenciesMacros in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D190B2C0606FD00867229 /* DependenciesMacros */; };
 		AC0D190F2C06070D00867229 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D190E2C06070D00867229 /* ComposableArchitecture */; };
+		AC0D19162C072FD200867229 /* Characters in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19152C072FD200867229 /* Characters */; };
+		AC0D19192C07330F00867229 /* CommonLogic in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19182C07330F00867229 /* CommonLogic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		AC0D18C72C05F0DA00867229 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC0D18CA2C05F0DA00867229 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC0D19012C06067B00867229 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
+		AC0D19132C072D7100867229 /* Characters */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Characters; sourceTree = "<group>"; };
+		AC0D19172C0731C500867229 /* CommonLogic */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CommonLogic; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,8 +38,10 @@
 			files = (
 				AC0D190F2C06070D00867229 /* ComposableArchitecture in Frameworks */,
 				AC0D190A2C0606FD00867229 /* Dependencies in Frameworks */,
+				AC0D19192C07330F00867229 /* CommonLogic in Frameworks */,
 				AC0D19042C0606B200867229 /* Networking in Frameworks */,
 				AC0D190C2C0606FD00867229 /* DependenciesMacros in Frameworks */,
+				AC0D19162C072FD200867229 /* Characters in Frameworks */,
 				AC0D19072C0606D600867229 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,9 +52,12 @@
 		AC0D18B72C05F0D900867229 = {
 			isa = PBXGroup;
 			children = (
+				AC0D19112C072D0B00867229 /* DomainLayer */,
+				AC0D19102C072D0B00867229 /* FeatureLayer */,
 				AC0D19002C06065900867229 /* CoreLayer */,
 				AC0D18C22C05F0D900867229 /* TCATest */,
 				AC0D18C12C05F0D900867229 /* Products */,
+				AC0D19142C072FD200867229 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +96,29 @@
 			path = CoreLayer;
 			sourceTree = "<group>";
 		};
+		AC0D19102C072D0B00867229 /* FeatureLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D19132C072D7100867229 /* Characters */,
+			);
+			path = FeatureLayer;
+			sourceTree = "<group>";
+		};
+		AC0D19112C072D0B00867229 /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D19172C0731C500867229 /* CommonLogic */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		AC0D19142C072FD200867229 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,6 +141,8 @@
 				AC0D19092C0606FD00867229 /* Dependencies */,
 				AC0D190B2C0606FD00867229 /* DependenciesMacros */,
 				AC0D190E2C06070D00867229 /* ComposableArchitecture */,
+				AC0D19152C072FD200867229 /* Characters */,
+				AC0D19182C07330F00867229 /* CommonLogic */,
 			);
 			productName = TCATest;
 			productReference = AC0D18C02C05F0D900867229 /* TCATest.app */;
@@ -436,6 +470,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AC0D190D2C06070D00867229 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		AC0D19152C072FD200867229 /* Characters */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Characters;
+		};
+		AC0D19182C07330F00867229 /* CommonLogic */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonLogic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
