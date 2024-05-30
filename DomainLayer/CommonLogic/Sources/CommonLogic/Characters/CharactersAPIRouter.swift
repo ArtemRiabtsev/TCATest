@@ -24,4 +24,9 @@ public final class CharactersAPIRouter: CharactersAPIRouterProtocol {
         let request = GetSingleCharacterRequest(characterId: id)
         return try await apiClient.execute(request: request)
     }
+
+    public func getNextPage(by stringUrl: String) async throws -> Characters {
+        let request = GetNextPageRequest(nextPageUrl: stringUrl)
+        return try await apiClient.execute(request: request)
+    }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AC0D18C42C05F0D900867229 /* TCATestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D18C32C05F0D900867229 /* TCATestApp.swift */; };
-		AC0D18C62C05F0D900867229 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D18C52C05F0D900867229 /* ContentView.swift */; };
 		AC0D18C82C05F0DA00867229 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0D18C72C05F0DA00867229 /* Assets.xcassets */; };
 		AC0D18CB2C05F0DA00867229 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0D18CA2C05F0DA00867229 /* Preview Assets.xcassets */; };
 		AC0D19042C0606B200867229 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19032C0606B200867229 /* Networking */; };
@@ -18,12 +17,12 @@
 		AC0D190F2C06070D00867229 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D190E2C06070D00867229 /* ComposableArchitecture */; };
 		AC0D19162C072FD200867229 /* Characters in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19152C072FD200867229 /* Characters */; };
 		AC0D19192C07330F00867229 /* CommonLogic in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19182C07330F00867229 /* CommonLogic */; };
+		AC0D191B2C08630D00867229 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D191A2C08630D00867229 /* Nuke */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC0D18C02C05F0D900867229 /* TCATest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCATest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0D18C32C05F0D900867229 /* TCATestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCATestApp.swift; sourceTree = "<group>"; };
-		AC0D18C52C05F0D900867229 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC0D18C72C05F0DA00867229 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC0D18CA2C05F0DA00867229 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC0D19012C06067B00867229 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
@@ -43,6 +42,7 @@
 				AC0D190C2C0606FD00867229 /* DependenciesMacros in Frameworks */,
 				AC0D19162C072FD200867229 /* Characters in Frameworks */,
 				AC0D19072C0606D600867229 /* NukeUI in Frameworks */,
+				AC0D191B2C08630D00867229 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				AC0D18C32C05F0D900867229 /* TCATestApp.swift */,
-				AC0D18C52C05F0D900867229 /* ContentView.swift */,
 				AC0D18C72C05F0DA00867229 /* Assets.xcassets */,
 				AC0D18C92C05F0DA00867229 /* Preview Content */,
 			);
@@ -143,6 +142,7 @@
 				AC0D190E2C06070D00867229 /* ComposableArchitecture */,
 				AC0D19152C072FD200867229 /* Characters */,
 				AC0D19182C07330F00867229 /* CommonLogic */,
+				AC0D191A2C08630D00867229 /* Nuke */,
 			);
 			productName = TCATest;
 			productReference = AC0D18C02C05F0D900867229 /* TCATest.app */;
@@ -204,7 +204,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC0D18C62C05F0D900867229 /* ContentView.swift in Sources */,
 				AC0D18C42C05F0D900867229 /* TCATestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +346,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,6 +376,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +479,11 @@
 		AC0D19182C07330F00867229 /* CommonLogic */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CommonLogic;
+		};
+		AC0D191A2C08630D00867229 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC0D19052C0606D600867229 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

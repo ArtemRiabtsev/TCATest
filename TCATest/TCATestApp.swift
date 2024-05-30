@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import Characters
 
 @main
 struct TCATestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CharactersFeedView(store: .init(initialState: .init(), reducer: { CharactersFeed() }))
         }
     }
 }
