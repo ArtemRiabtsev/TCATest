@@ -14,7 +14,6 @@
 		AC0D19072C0606D600867229 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19062C0606D600867229 /* NukeUI */; };
 		AC0D190A2C0606FD00867229 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19092C0606FD00867229 /* Dependencies */; };
 		AC0D190C2C0606FD00867229 /* DependenciesMacros in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D190B2C0606FD00867229 /* DependenciesMacros */; };
-		AC0D190F2C06070D00867229 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D190E2C06070D00867229 /* ComposableArchitecture */; };
 		AC0D19162C072FD200867229 /* Characters in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19152C072FD200867229 /* Characters */; };
 		AC0D19192C07330F00867229 /* CommonLogic in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D19182C07330F00867229 /* CommonLogic */; };
 		AC0D191B2C08630D00867229 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = AC0D191A2C08630D00867229 /* Nuke */; };
@@ -35,7 +34,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC0D190F2C06070D00867229 /* ComposableArchitecture in Frameworks */,
 				AC0D190A2C0606FD00867229 /* Dependencies in Frameworks */,
 				AC0D19192C07330F00867229 /* CommonLogic in Frameworks */,
 				AC0D19042C0606B200867229 /* Networking in Frameworks */,
@@ -139,7 +137,6 @@
 				AC0D19062C0606D600867229 /* NukeUI */,
 				AC0D19092C0606FD00867229 /* Dependencies */,
 				AC0D190B2C0606FD00867229 /* DependenciesMacros */,
-				AC0D190E2C06070D00867229 /* ComposableArchitecture */,
 				AC0D19152C072FD200867229 /* Characters */,
 				AC0D19182C07330F00867229 /* CommonLogic */,
 				AC0D191A2C08630D00867229 /* Nuke */,
@@ -176,7 +173,6 @@
 				AC0D19022C0606B200867229 /* XCLocalSwiftPackageReference "CoreLayer/Networking" */,
 				AC0D19052C0606D600867229 /* XCRemoteSwiftPackageReference "Nuke" */,
 				AC0D19082C0606FD00867229 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
-				AC0D190D2C06070D00867229 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = AC0D18C12C05F0D900867229 /* Products */;
 			projectDirPath = "";
@@ -437,14 +433,6 @@
 				minimumVersion = 1.3.0;
 			};
 		};
-		AC0D190D2C06070D00867229 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.10.4;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -466,11 +454,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AC0D19082C0606FD00867229 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
 			productName = DependenciesMacros;
-		};
-		AC0D190E2C06070D00867229 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AC0D190D2C06070D00867229 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
 		};
 		AC0D19152C072FD200867229 /* Characters */ = {
 			isa = XCSwiftPackageProductDependency;

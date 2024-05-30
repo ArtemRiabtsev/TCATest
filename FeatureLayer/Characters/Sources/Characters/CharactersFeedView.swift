@@ -25,13 +25,24 @@ public struct CharactersFeedView: View {
 
     public var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
-            ScrollView {
-                LazyVStack {
-                    ForEach(viewStore.state.charactersList.indices, id: \.self) { index in
-                        makeCharacterView(viewStore.state.charactersList[index])
+            NavigationView {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewStore.charactersList.indices, id: \.self) { index in
+                            NavigationLink {
+                                CharacterDetailsView(
+                                    store: .init(
+                                        initialState: .init(characterId: viewStore.charactersList[index].id),
+                                        reducer: { CharacterDetails() }
+                                    )
+                                )
+                            } label: {
+                                makeCharacterView(viewStore.charactersList[index])
+                            }
                             .onAppear {
                                 viewStore.send(.handleNextIndex(index))
                             }
+                        }
                     }
                 }
             }
